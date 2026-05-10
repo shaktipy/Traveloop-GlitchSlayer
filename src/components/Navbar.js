@@ -105,6 +105,16 @@ export default function Navbar() {
         >
           + New Trip
         </button>
+        <button
+          onClick={() => navigate('/admin')}
+          style={{
+            background: 'none', border: '2px solid #f6ad55',
+            color: '#f6ad55', padding: '8px 16px',
+            borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold'
+            }}
+>
+            ⚙️ Admin
+        </button>
 
         {/* Profile icon */}
         <button onClick={() => navigate('/profile')}

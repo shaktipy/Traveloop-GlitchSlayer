@@ -12,6 +12,7 @@ import CitySearch from './pages/CitySearch';
 import Profile from './pages/Profile';
 import ActivitySearch from './pages/ActivitySearch';
 import SharedTrip from './pages/SharedTrip';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/activity-search" element={<ActivitySearch />} />
         <Route path="/share/:shareToken" element={<SharedTrip />} />
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );
