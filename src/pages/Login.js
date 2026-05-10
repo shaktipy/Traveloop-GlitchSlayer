@@ -15,6 +15,7 @@ export default function Login() {
   const handleAuth = async () => {
     setError('');
     if (!email || !password) { setError('Enter Email and Password!'); return; }
+    if (!/\S+@\S+\.\S+/.test(email)) { setError('Enter a valid email address!'); return; }
     if (password.length < 6) { setError('Password must be 6+ characters long!'); return; }
     if (isSignup && !name) { setError('Enter your name!'); return; }
 
