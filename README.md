@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# ✈️ Traveloop – Personalized Travel Planning Made Easy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A user-centric, responsive travel planning application that simplifies multi-city trip planning with budget tracking, itinerary building, and collaborative features.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Problem Statement
 
-### `npm start`
+**Odoo Hackathon 2026**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Design and develop a complete travel planning application where users can create customized multi-city itineraries, assign travel dates, activities, and budgets, discover activities and destinations through search, receive cost breakdowns and share their plans.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 💡 Our Solution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Traveloop is an end-to-end travel planning platform that empowers users to dream, design, and organize trips with ease. Users can plan multi-city trips, track budgets, manage packing lists, and take trip notes — all in one place.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ✨ Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Core Features
+- ✅ User Authentication (Login / Signup with validation)
+- ✅ Dashboard with recent trips & popular destinations
+- ✅ Create & manage multi-city trips
+- ✅ Itinerary Builder with stops & activities
+- ✅ Budget & Cost Breakdown (by category & city)
+- ✅ City Search with filters (cost, popularity)
+- ✅ Packing Checklist with progress tracker
+- ✅ Trip Notes & Journal
+- ✅ User Profile & Settings
+- ✅ Admin Dashboard with analytics
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technical Highlights
+- ✅ Real-time data with Supabase
+- ✅ Relational Database (PostgreSQL)
+- ✅ Input Validation throughout
+- ✅ Responsive UI
+- ✅ Version Control (GitHub)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Layer | Technology |
+|---|---|
+| Frontend | React.js |
+| Database | Supabase (PostgreSQL) |
+| Authentication | Supabase Auth |
+| Real-time | Supabase Realtime |
+| Version Control | GitHub |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🗄️ Database Schema
 
-## Learn More
+users → trips → stops → activities
+↘ notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Tables:** users, trips, stops, activities, notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+<img width="545" height="500" alt="Screenshot 2026-05-10 171034" src="https://github.com/user-attachments/assets/e9adbfb7-0257-4857-a3cd-3cc5c3ac907d" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ Setup & Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
+- Node.js v18+
+- Supabase account
 
-### Making a Progressive Web App
+### Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# 1. Clone the repository
+git clone https://github.com/shaktipy/Traveloop-GlitchSlayer.git
 
-### Advanced Configuration
+# 2. Navigate to project
+cd traveloop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# 3. Install dependencies
+npm install
 
-### Deployment
+# 4. Set up environment
+# Create supabaseClient.js with your credentials
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# 5. Run the project
+npm start
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔑 Supabase Setup
+
+Create `src/supabaseClient.js`:
+
+```javascript
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'YOUR_SUPABASE_URL'
+const supabaseKey = 'YOUR_SUPABASE_ANON_KEY'
+
+export const supabase = createClient(supabaseUrl, supabaseKey)
+```
+
+---
+
+## 👥 Team – GlitchSlayer
+
+| Name | Role | GitHub |
+|---|---|---|
+| Shakti Vardhan Singh | Team Leader • Full Stack Developer • Database Architect • Project Structure| [@shaktipy] |
+| Nitesh Kumar Mehta | Full Stack Developer • Authorization • UI/UX Design | [@nitesh-cpu] |
+| Aditya Kumar | Full Stack Developer • Real-time • UI/UX Design • API Integration | [@Addy296] |
+| Navya Kumari | Backend Developer • Input Validation • Testing & QA | [@navyashah19] |
+
+**Institution:** Parul University
+**Team:** GlitchSlayer ⚡
+
+---
+
+## 🏆 Hackathon
+
+**Event:** Odoo Hackathon 2026
+**Round:** Virtual Round
+**Submitted via:** [hackathon.odoo.com](https://hackathon.odoo.com)
+
+---
+
+## 📹 Demo
+
+🎥 **Solution Video:** [Link](https://youtu.be/_zIwQxvS1mI?si=L-6SP1hD1EkkDQ_M)
+
+## 📸 Screenshots
+
+| Screen | Description |
+|---|---|
+| Login/Signup | User authentication with validation |
+
+<img width="1860" height="888" alt="Screenshot 2026-05-10 153108" src="https://github.com/user-attachments/assets/91a12a9c-42a0-44fe-b2d2-e611e03c156a" />
+
+
+| Dashboard | Trip overview & popular destinations |
+
+<img width="1863" height="903" alt="Screenshot 2026-05-10 151326" src="https://github.com/user-attachments/assets/43820317-3425-4a2d-b0a6-972fef4db9f0" />
+
+
+| Itinerary Builder | Multi-city trip planning with activities |
+
+<img width="1896" height="907" alt="Screenshot 2026-05-10 153233" src="https://github.com/user-attachments/assets/ddca0d61-ddfc-4c80-837f-720f99a3507d" />
+
+
+| Admin Dashboard | Platform analytics & management |
+
+<img width="1881" height="909" alt="Screenshot 2026-05-10 153346" src="https://github.com/user-attachments/assets/2ed881d5-a519-4bf6-b36a-39e0738803b1" />
+
